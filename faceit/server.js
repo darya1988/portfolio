@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 
-
+app.use(express.static(__dirname + '/'));
 app.get('/tasks', function(req, res) {
 
     res.header('Access-Control-Allow-Origin', '*');
@@ -11,64 +11,62 @@ app.get('/tasks', function(req, res) {
 
 
     res.json([
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            },
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        },
 
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: false,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: false,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: false,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            },
-            {
-                completed: true,
-                title: 'Test task',
-                description: 'Test Description'
-            }
-        ]);
-
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: false,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: false,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: false,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        },
+        {
+            completed: true,
+            title: 'Test task',
+            description: 'Test Description'
+        }
+    ]);
 
     res.send(JSON.stringify(res));
-
-
 
 });
 
 app.listen(3000, 'localhost');
+
